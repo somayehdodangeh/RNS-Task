@@ -6,7 +6,15 @@ const VisualComponents = () => {
   return (
     <div className="visualComponents">
       <Header children={"visual"} desc={"choose your components"} />
-      VisualComponents
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      VisualComponents are here
     </div>
   );
 };
