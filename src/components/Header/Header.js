@@ -4,7 +4,10 @@ import "./Header.css";
 const Header = (props) => {
   return (
     <div className="header">
-      {props.children} (some decribtion)
+      <div>{props.children}</div>
+      <div>
+        <h6>description : {props.desc}</h6>
+      </div>
     </div>
   );
 };

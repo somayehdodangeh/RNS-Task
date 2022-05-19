@@ -5,7 +5,10 @@ import Header from "../Header/Header";
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <Header children={"Dashboard"} des />
+      <Header
+        children={"Dashboard"}
+        desc={"You can edit/delete the charts from left sidebar (Inspector)"}
+      />
       <div>Dashboard</div>
     </div>
   );

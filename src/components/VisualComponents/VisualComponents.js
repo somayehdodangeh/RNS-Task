@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 const VisualComponents = () => {
   return (
     <div className="visualComponents">
-      <Header children={"visual"} />
+      <Header children={"visual"} desc={"choose your components"} />
       VisualComponents
     </div>
   );

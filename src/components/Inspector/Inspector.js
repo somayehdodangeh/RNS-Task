@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 const Inspector = () => {
   return (
     <div className="Inspector">
-      <Header children={"Inspector"} />
+      <Header children={"Inspector"} desc={"edit/delete charts here"} />
       Inspector
     </div>
   );
