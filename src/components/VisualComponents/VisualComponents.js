@@ -1,7 +1,8 @@
 import React from "react";
+import "./VisualComponents.css";
 
 const VisualComponents = () => {
-  return <div>VisualComponents</div>;
+  return <div className="visualComponents">VisualComponents</div>;
 };
 
 export default VisualComponents;
