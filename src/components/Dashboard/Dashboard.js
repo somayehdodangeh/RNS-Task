@@ -15,14 +15,10 @@ const Dashboard = (props) => {
           <div>
             <div className="bigchart">{props.pieState}</div>
           </div>
-        ) : (
-          <h1>Choose a Chart</h1>
-        )}
+        ) : null}
         {props.doughnutState ? (
           <div className="bigchart">{props.doughnutState}</div>
-        ) : (
-          <h1>Choose a Chart</h1>
-        )}
+        ) : null}
       </div>
     </div>
   );

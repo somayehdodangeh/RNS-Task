@@ -9,15 +9,21 @@ import { DoughnutBig } from "../Charts/DoughnutBig";
 const Panel = (props) => {
   const [pieState, setPieState] = useState();
   const [doughnutState, setDoughnutState] = useState();
+
   const pieHandler = () => {
     const value = <PieBig />;
-    setPieState(value);
+    const updatedValue = [pieState, value];
+    setPieState(updatedValue);
   };
-  
 
   const doughnutHandler = () => {
     const value = <DoughnutBig />;
-    setDoughnutState(value);
+    const updatedValue = [doughnutState, value];
+    if (updatedValue.length <= 2) {
+      setDoughnutState(updatedValue);
+    } else {
+      setDoughnutState("");
+    }
   };
   return (
     <div className="panel">
