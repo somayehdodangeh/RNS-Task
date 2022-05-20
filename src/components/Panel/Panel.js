@@ -13,6 +13,7 @@ const Panel = (props) => {
     const value = <PieBig />;
     setPieState(value);
   };
+  
 
   const doughnutHandler = () => {
     const value = <DoughnutBig />;
@@ -23,8 +24,11 @@ const Panel = (props) => {
       <Inspector />
       <Dashboard
         pieState={pieState}
-        doughnutState={doughnutState}
         setPieState={setPieState}
+        pieHandler={pieHandler}
+        doughnutState={doughnutState}
+        setDoughnutState={setDoughnutState}
+        doughnutHandler={doughnutHandler}
       />
 
       <VisualComponents

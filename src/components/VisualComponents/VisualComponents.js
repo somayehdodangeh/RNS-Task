@@ -14,12 +14,11 @@ const VisualComponents = (props) => {
       <div className="chart" onClick={props.pieHandler}>
         <PieMini />
         Pie Chart
-        <hr />
       </div>
       <div className="chart" onClick={props.doughnutHandler}>
         <DoughnutMini />
         Doughnut Chart
-        <hr />
+        
       </div>
       <br />
       Other VisualComponents are here ...
