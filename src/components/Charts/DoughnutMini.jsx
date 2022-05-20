@@ -5,7 +5,7 @@ import { Doughnut } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const data = {
-  labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+  // labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   datasets: [
     {
       label: "# of Votes",
@@ -31,6 +31,6 @@ export const data = {
   ],
 };
 
-export function App3() {
+export function DoughnutMini() {
   return <Doughnut data={data} />;
 }

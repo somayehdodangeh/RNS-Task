@@ -1,19 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./VisualComponents.css";
 import Header from "../Header/Header";
-import { App2 } from "../Charts/Pie";
-import { App3 } from "../Charts/Doughnut";
+import { PieMini } from "../Charts/PieMini";
+import { DoughnutMini } from "../Charts/DoughnutMini";
+import { PieBig } from "../Charts/PieBig";
 
-const VisualComponents = () => {
+const VisualComponents = (props) => {
   return (
     <div className="visualComponents">
       <Header children={"visual"} desc={"choose your components"} />
       <br />
       <br />
-      <App2 />
-      <App3 />
+      <div className="chart" onClick={props.pieHandler}>
+        <PieMini />
+        Pie Chart
+        <hr />
+      </div>
+      <div className="chart" onClick={props.doughnutHandler}>
+        <DoughnutMini />
+        Doughnut Chart
+        <hr />
+      </div>
       <br />
-      Other VisualComponents are here
+      Other VisualComponents are here ...
     </div>
   );
 };

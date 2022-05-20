@@ -10,3 +10,11 @@
   margin-left: 5px;
   background-color: rgb(221, 223, 246);
 }
+.chart {
+  width: 100px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+hr {
+  margin-top: 10px;
+}

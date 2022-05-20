@@ -8,3 +8,11 @@
   margin-left: 5px;
   background-color: rgb(207, 209, 243);
 }
+.chartHolder {
+  display: flex;
+  flex-direction: row;
+}
+.bigchart {
+  width: 200px;
+  margin-left: 50px;
+}
