@@ -1,6 +1,8 @@
 import React from "react";
 import "./VisualComponents.css";
 import Header from "../Header/Header";
+import { App2 } from "../Charts/Pie";
+import { App3 } from "../Charts/Doughnut";
 
 const VisualComponents = () => {
   return (
@@ -8,13 +10,10 @@ const VisualComponents = () => {
       <Header children={"visual"} desc={"choose your components"} />
       <br />
       <br />
+      <App2 />
+      <App3 />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      VisualComponents are here
+      Other VisualComponents are here
     </div>
   );
 };
