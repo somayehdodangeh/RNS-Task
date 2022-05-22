@@ -9,3 +9,7 @@
   border: 1px solid rgb(190, 190, 190);
   background-color: rgb(221, 223, 246);
 }
+.data {
+  text-align: center;
+  margin-left: 2px;
+}

@@ -33,9 +33,27 @@ const Panel = (props) => {
     const updatedValue = [polarAreaState, value];
     setPolarAreaState(updatedValue);
   };
+  const oneHandler = () => {
+    if (!pieState && !doughnutState && !polarAreaState) {
+      return <h4></h4>;
+    } else {
+      return <h4>Data is : ...</h4>;
+    }
+  };
   return (
     <div className="panel">
-      <Inspector />
+      <Inspector
+        pieState={pieState}
+        setPieState={setPieState}
+        pieHandler={pieHandler}
+        doughnutState={doughnutState}
+        setDoughnutState={setDoughnutState}
+        doughnutHandler={doughnutHandler}
+        polarAreaState={polarAreaState}
+        setPolarAreaState={setPolarAreaState}
+        polarAreaHandler={polarAreaHandler}
+        oneHandler={oneHandler}
+      />
       <Dashboard
         pieState={pieState}
         setPieState={setPieState}
@@ -46,6 +64,7 @@ const Panel = (props) => {
         polarAreaState={polarAreaState}
         setPolarAreaState={setPolarAreaState}
         polarAreaHandler={polarAreaHandler}
+        oneHandler={oneHandler}
       />
 
       <VisualComponents
@@ -58,6 +77,7 @@ const Panel = (props) => {
         polarAreaState={polarAreaState}
         setPolarAreaState={setPolarAreaState}
         polarAreaHandler={polarAreaHandler}
+        oneHandler={oneHandler}
       />
     </div>
   );
