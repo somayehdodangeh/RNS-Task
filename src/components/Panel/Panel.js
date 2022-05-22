@@ -7,6 +7,7 @@ import PieBig from "../Charts/PieBig";
 import { DoughnutBig } from "../Charts/DoughnutBig";
 import { data } from "../Charts/PieMini";
 import { PolarAreaBig } from "../Charts/PolarAreaBig";
+import { v4 as uuidv4 } from "uuid";
 
 const Panel = (props) => {
   const [pieState, setPieState] = useState();
@@ -15,27 +16,29 @@ const Panel = (props) => {
 
   const pieHandler = () => {
     const value = <PieBig />;
-    const updatedValue = [pieState, value];
+    const text = <button className="idBtn">ID </button>;
+    const id = uuidv4();
+    const updatedValue = [pieState, value, text, id];
     setPieState(updatedValue);
   };
 
   const doughnutHandler = () => {
     const value = <DoughnutBig />;
-    const updatedValue = [doughnutState, value];
-    if (updatedValue.length <= 2) {
-      setDoughnutState(updatedValue);
-    } else {
-      setDoughnutState("");
-    }
+    const id = uuidv4();
+    const text = <button className="idBtn">ID </button>;
+    const updatedValue = [doughnutState, value, text, id];
+    setDoughnutState(updatedValue);
   };
   const polarAreaHandler = () => {
     const value = <PolarAreaBig />;
-    const updatedValue = [polarAreaState, value];
+    const id = uuidv4();
+    const text = <button className="idBtn">ID </button>;
+    const updatedValue = [polarAreaState, value, text, id];
     setPolarAreaState(updatedValue);
   };
   const oneHandler = () => {
     if (!pieState && !doughnutState && !polarAreaState) {
-      return <h4></h4>;
+      return <h4>NO DATA</h4>;
     } else {
       return <h4>Data is : ...</h4>;
     }
