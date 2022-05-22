@@ -6,7 +6,7 @@ const Header = (props) => {
     <div className="header">
       <div>{props.children}</div>
       <div>
-        <h6>description : {props.desc}</h6>
+        <h6>desc : {props.desc}</h6>
       </div>
     </div>
   );

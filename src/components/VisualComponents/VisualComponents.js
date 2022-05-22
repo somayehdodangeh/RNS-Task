@@ -3,7 +3,7 @@ import "./VisualComponents.css";
 import Header from "../Header/Header";
 import { PieMini } from "../Charts/PieMini";
 import { DoughnutMini } from "../Charts/DoughnutMini";
-import { PieBig } from "../Charts/PieBig";
+import { PolarAreaMini } from "../Charts/PolarAreaMini";
 
 const VisualComponents = (props) => {
   return (
@@ -13,15 +13,24 @@ const VisualComponents = (props) => {
       <br />
       <div className="chart" onClick={props.pieHandler}>
         <PieMini />
-        Pie Chart
+        Pie
       </div>
       <div className="chart" onClick={props.doughnutHandler}>
         <DoughnutMini />
-        Doughnut Chart
-        
+        Doughnut
+      </div>
+      <div className="chart" onClick={props.polarAreaHandler}>
+        <PolarAreaMini />
+        PolarArea
       </div>
       <br />
-      Other VisualComponents are here ...
+      <a
+        href="https://react-chartjs-2.js.org/examples"
+        target="_blank"
+        className="btn"
+      >
+        + Add More
+      </a>
     </div>
   );
 };

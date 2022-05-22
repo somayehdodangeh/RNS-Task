@@ -23,3 +23,19 @@
 hr {
   margin-top: 10px;
 }
+.btn {
+  border: none;
+  background: none;
+  color: black;
+  width: 100%;
+  border: 2px solid rgb(61, 54, 142);
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 7px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover {
+  background: rgb(61, 54, 142);
+  color: white;
+}

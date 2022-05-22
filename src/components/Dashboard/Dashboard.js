@@ -1,6 +1,7 @@
 import "./Dashboard.css";
 import Header from "../Header/Header";
 import { useState } from "react";
+import { LineBig } from "../Charts/PolarAreaMini";
 
 const Dashboard = (props) => {
   return (
@@ -18,6 +19,9 @@ const Dashboard = (props) => {
         ) : null}
         {props.doughnutState ? (
           <div className="bigchart">{props.doughnutState}</div>
+        ) : null}
+        {props.polarAreaState ? (
+          <div className="bigchart">{props.polarAreaState}</div>
         ) : null}
       </div>
     </div>
