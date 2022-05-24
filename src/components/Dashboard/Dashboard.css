@@ -16,9 +16,37 @@
 .chartHolder {
   display: flex;
   flex-direction: row;
-  margin:auto
+  margin: auto;
 }
 .bigchart {
   width: 200px;
   margin-left: 50px;
+}
+.btnDashremove {
+  margin-top: 5px;
+  margin-right: 2px;
+  float: right;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(61, 54, 142);
+  border-radius: 0 0 10px 10px;
+  color: white;
+  padding: 5px 20px;
+}
+.btnDashremove:hover {
+  background-color: rgb(184, 0, 0);
+}
+.btnDashsave {
+  margin-top: 5px;
+  margin-right: 2px;
+  float: right;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(61, 54, 142);
+  border-radius: 0 0 10px 10px;
+  color: white;
+  padding: 5px 20px;
+}
+.btnDashsave:hover {
+  background-color: green;
 }

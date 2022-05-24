@@ -18,7 +18,7 @@ const VisualComponents = (props) => {
       <div className="chart" onClick={props.doughnutHandler}>
         <DoughnutMini />
         Doughnut
-      </div>
+      </div>qwt55566
       <div className="chart" onClick={props.polarAreaHandler}>
         <PolarAreaMini />
         PolarArea

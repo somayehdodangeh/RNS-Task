@@ -4,12 +4,22 @@ import { useState } from "react";
 import { LineBig } from "../Charts/PolarAreaMini";
 
 const Dashboard = (props) => {
+  const removeHandler = () => {
+    props.setPieState("");
+    props.setDoughnutState("");
+    props.setPolarAreaState("");
+  };
+
   return (
     <div className="dashboard">
       <Header
         children={"Dashboard"}
         desc={"You can edit/delete the charts from left sidebar (Inspector)"}
       />
+      <button onClick={removeHandler} className="btnDashremove">
+        Clear
+      </button>
+      <button className="btnDashsave">Save</button>
 
       <div className="chartHolder">
         {props.pieState ? (
