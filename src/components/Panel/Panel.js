@@ -3,11 +3,11 @@ import Dashboard from "../Dashboard/Dashboard";
 import VisualComponents from "../VisualComponents/VisualComponents";
 import Inspector from "../Inspector/Inspector";
 import "./Panel.css";
-import PieBig from "../Charts/PieBig";
 import { DoughnutBig } from "../Charts/DoughnutBig";
-import { data } from "../Charts/PieMini";
 import { PolarAreaBig } from "../Charts/PolarAreaBig";
 import { v4 as uuidv4 } from "uuid";
+import { PieBig } from "../Charts/PieBig";
+import { data } from "../Charts/PieBig";
 
 const Panel = (props) => {
   const [pieState, setPieState] = useState();
@@ -37,12 +37,14 @@ const Panel = (props) => {
     setPolarAreaState(updatedValue);
   };
   const oneHandler = () => {
+    const value = [data.datasets[0].data];
     if (!pieState && !doughnutState && !polarAreaState) {
       return <h4>NO DATA</h4>;
     } else {
-      return <h4>Data is : ...</h4>;
+      return <h5>values:{value}</h5>;
     }
   };
+
   return (
     <div className="panel">
       <Inspector

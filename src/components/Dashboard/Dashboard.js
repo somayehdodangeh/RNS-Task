@@ -2,6 +2,9 @@ import "./Dashboard.css";
 import Header from "../Header/Header";
 import { useState } from "react";
 import { LineBig } from "../Charts/PolarAreaMini";
+import PieBig from "../Charts/PieBig";
+import Inspector from "../Inspector/Inspector";
+
 
 const Dashboard = (props) => {
   const removeHandler = () => {
@@ -24,7 +27,9 @@ const Dashboard = (props) => {
       <div className="chartHolder">
         {props.pieState ? (
           <div>
-            <div className="bigchart">{props.pieState}</div>
+            <div onClick={props.pieClick} className="bigchart">
+              {props.pieState}
+            </div>
           </div>
         ) : null}
         {props.doughnutState ? (
