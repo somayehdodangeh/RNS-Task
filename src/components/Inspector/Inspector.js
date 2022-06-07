@@ -11,8 +11,12 @@ const Inspector = (props) => {
       <br />
       <div>
         <div>
-          <div className="data">{props.oneHandler()}</div>
+          {/* {props.pieState.map((item, index) => {
+            return <div>Value:{item.value}</div>;
+          })} */}
+          {props.pieClick()}
         </div>
+        <div>{props.pieClick}</div>
       </div>
     </div>
   );

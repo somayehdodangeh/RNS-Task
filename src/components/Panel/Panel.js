@@ -10,15 +10,27 @@ import { PieBig } from "../Charts/PieBig";
 import { data } from "../Charts/PieBig";
 
 const Panel = (props) => {
-  const [pieState, setPieState] = useState();
+  const [pieState, setPieState] = useState([]);
   const [doughnutState, setDoughnutState] = useState();
   const [polarAreaState, setPolarAreaState] = useState();
 
+  const pieClick = (id) => {
+    const show = pieState.find((item) => item.id === id);
+    const value = data.datasets[0].data;
+
+    pieState.map((item, index) => {
+      return <div>Value:{item.value}</div>;
+    });
+
+    // console.log(value);
+  };
+
   const pieHandler = () => {
-    const value = <PieBig />;
+    const type = <PieBig />;
+    const value = data.datasets[0].data;
     const text = <button className="idBtn">ID </button>;
     const id = uuidv4();
-    const updatedValue = [pieState, value, text, id];
+    const updatedValue = [...pieState, { type, value, text, id }];
     setPieState(updatedValue);
   };
 
@@ -58,6 +70,7 @@ const Panel = (props) => {
         setPolarAreaState={setPolarAreaState}
         polarAreaHandler={polarAreaHandler}
         oneHandler={oneHandler}
+        pieClick={pieClick}
       />
       <Dashboard
         pieState={pieState}
@@ -70,6 +83,7 @@ const Panel = (props) => {
         setPolarAreaState={setPolarAreaState}
         polarAreaHandler={polarAreaHandler}
         oneHandler={oneHandler}
+        pieClick={pieClick}
       />
 
       <VisualComponents
@@ -83,6 +97,7 @@ const Panel = (props) => {
         setPolarAreaState={setPolarAreaState}
         polarAreaHandler={polarAreaHandler}
         oneHandler={oneHandler}
+        pieClick={pieClick}
       />
     </div>
   );

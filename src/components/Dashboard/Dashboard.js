@@ -4,14 +4,16 @@ import { useState } from "react";
 import { LineBig } from "../Charts/PolarAreaMini";
 import PieBig from "../Charts/PieBig";
 import Inspector from "../Inspector/Inspector";
-
+import { v4 as uuidv4 } from "uuid";
 
 const Dashboard = (props) => {
+  console.log(props);
   const removeHandler = () => {
     props.setPieState("");
     props.setDoughnutState("");
     props.setPolarAreaState("");
   };
+
 
   return (
     <div className="dashboard">
@@ -25,11 +27,16 @@ const Dashboard = (props) => {
       <button className="btnDashsave">Save</button>
 
       <div className="chartHolder">
-        {props.pieState ? (
-          <div>
-            <div onClick={props.pieClick} className="bigchart">
-              {props.pieState}
-            </div>
+        {props.pieState.length > 0 ? (
+          <div className="bigchart">
+            {props.pieState.map((item, index) => {
+              return (
+                <span onClick={() => props.pieClick(item.id)} key={item.id}>
+                  {item.type}
+                  Value:{item.value} ID:{item.id}
+                </span>
+              );
+            })}
           </div>
         ) : null}
         {props.doughnutState ? (
