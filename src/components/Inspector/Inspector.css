@@ -8,8 +8,31 @@
   align-items: center;
   border: 1px solid rgb(190, 190, 190);
   background-color: rgb(221, 223, 246);
+  overflow: auto;
 }
 .data {
   text-align: center;
   margin-left: 2px;
+}
+.values {
+  background-color: rgb(80, 71, 179);
+  border-radius: 20px 0px 20px 0px;
+  color: white;
+  padding: 5px;
+  margin: 5px 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.inputValue {
+  margin-left: 20px;
+  width: 30px;
+  
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+}
+.change {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }

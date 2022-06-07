@@ -14,23 +14,34 @@ const Panel = (props) => {
   const [doughnutState, setDoughnutState] = useState();
   const [polarAreaState, setPolarAreaState] = useState();
 
-  const pieClick = (id) => {
-    const show = pieState.find((item) => item.id === id);
-    const value = data.datasets[0].data;
-
-    pieState.map((item, index) => {
-      return <div>Value:{item.value}</div>;
-    });
-
-    // console.log(value);
-  };
-
   const pieHandler = () => {
     const type = <PieBig />;
-    const value = data.datasets[0].data;
+    const value = [data.datasets[0].data];
+    const value0 = [data.datasets[0].data[0]];
+    const value1 = [data.datasets[0].data[1]];
+    const value2 = [data.datasets[0].data[2]];
+    const value3 = [data.datasets[0].data[3]];
+    const value4 = [data.datasets[0].data[4]];
+    const value5 = [data.datasets[0].data[5]];
+    const value6 = [data.datasets[0].data[6]];
     const text = <button className="idBtn">ID </button>;
     const id = uuidv4();
-    const updatedValue = [...pieState, { type, value, text, id }];
+    const updatedValue = [
+      ...pieState,
+      {
+        value0,
+        value1,
+        value2,
+        value3,
+        value4,
+        value5,
+        value6,
+        type,
+        value,
+        text,
+        id,
+      },
+    ];
     setPieState(updatedValue);
   };
 
@@ -48,14 +59,6 @@ const Panel = (props) => {
     const updatedValue = [polarAreaState, value, text, id];
     setPolarAreaState(updatedValue);
   };
-  const oneHandler = () => {
-    const value = [data.datasets[0].data];
-    if (!pieState && !doughnutState && !polarAreaState) {
-      return <h4>NO DATA</h4>;
-    } else {
-      return <h5>values:{value}</h5>;
-    }
-  };
 
   return (
     <div className="panel">
@@ -69,8 +72,6 @@ const Panel = (props) => {
         polarAreaState={polarAreaState}
         setPolarAreaState={setPolarAreaState}
         polarAreaHandler={polarAreaHandler}
-        oneHandler={oneHandler}
-        pieClick={pieClick}
       />
       <Dashboard
         pieState={pieState}
@@ -82,8 +83,6 @@ const Panel = (props) => {
         polarAreaState={polarAreaState}
         setPolarAreaState={setPolarAreaState}
         polarAreaHandler={polarAreaHandler}
-        oneHandler={oneHandler}
-        pieClick={pieClick}
       />
 
       <VisualComponents
@@ -96,8 +95,6 @@ const Panel = (props) => {
         polarAreaState={polarAreaState}
         setPolarAreaState={setPolarAreaState}
         polarAreaHandler={polarAreaHandler}
-        oneHandler={oneHandler}
-        pieClick={pieClick}
       />
     </div>
   );

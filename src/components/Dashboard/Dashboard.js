@@ -9,11 +9,10 @@ import { v4 as uuidv4 } from "uuid";
 const Dashboard = (props) => {
   console.log(props);
   const removeHandler = () => {
-    props.setPieState("");
-    props.setDoughnutState("");
-    props.setPolarAreaState("");
+    props.setPieState([]);
+    props.setDoughnutState([]);
+    props.setPolarAreaState([]);
   };
-
 
   return (
     <div className="dashboard">
@@ -31,10 +30,14 @@ const Dashboard = (props) => {
           <div className="bigchart">
             {props.pieState.map((item, index) => {
               return (
-                <span onClick={() => props.pieClick(item.id)} key={item.id}>
+                // <div onClick={() => props.pieHandler(item.id)} key={item.id}>
+                //   {item.type}
+                //   Value:{item.value} IDddd:{item.id}
+                // </div>
+                <div  key={item.id}>
                   {item.type}
-                  Value:{item.value} ID:{item.id}
-                </span>
+                  {/* Value:{item.value} IDddd:{item.id} */}
+                </div>
               );
             })}
           </div>
