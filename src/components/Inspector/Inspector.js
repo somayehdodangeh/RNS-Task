@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Inspector.css";
 import Header from "../Header/Header";
+// import { data } from "../Charts/PieBig";
 
 const Inspector = (props) => {
   return (
@@ -12,20 +13,58 @@ const Inspector = (props) => {
           {props.pieState.map((item, index) => {
             return (
               <div className="values">
-                {/* <div>Value:{item.value}</div> */}
-                Red <input className="inputValue" value={item.value0} />
+                {/* <div>Value:{value0}</div> */}
+                Red{" "}
+                <input
+                  value={props.datavalue0}
+                  type="number"
+                  className="inputValue"
+                  onChange={(e) => props.setDataValue0(e.target.value)}
+                />
                 <br />
-                Blue <input className="inputValue" value={item.value1} />
+                Blue{" "}
+                <input
+                  value={props.datavalue1}
+                  type="number"
+                  className="inputValue"
+                  onChange={(e) => props.setDataValue1(e.target.value)}
+                />
                 <br />
-                Yellow <input className="inputValue" value={item.value2} />
+                Yellow{" "}
+                <input
+                  value={props.datavalue2}
+                  type="number"
+                  className="inputValue"
+                  onChange={(e) => props.setDataValue2(e.target.value)}
+                />
                 <br />
-                Green <input className="inputValue" value={item.value3} />
+                Green{" "}
+                <input
+                  value={props.datavalue3}
+                  type="number"
+                  className="inputValue"
+                  onChange={(e) => props.setDataValue3(e.target.value)}
+                />
                 <br />
-                Purple <input className="inputValue" value={item.value4} />
+                Purple{" "}
+                <input
+                  value={props.datavalue4}
+                  type="number"
+                  className="inputValue"
+                  onChange={(e) => props.setDataValue4(e.target.value)}
+                />
                 <br />
-                Orange <input className="inputValue" value={item.value5} />
+                Orange{" "}
+                <input
+                  value={props.datavalue5}
+                  type="number"
+                  className="inputValue"
+                  onChange={(e) => props.setDataValue5(e.target.value)}
+                />
                 <br />
-                <button className="change">change</button>
+                <button onClick={props.pieHandler} className="change">
+                  change
+                </button>
               </div>
             );
           })}
