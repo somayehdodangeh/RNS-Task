@@ -10,9 +10,9 @@ const Inspector = (props) => {
 
       <div>
         <div>
-          {props.pieState.map((item, index) => {
+          {props.pieState.map((index) => {
             return (
-              <div className="values">
+              <div key={index} className="values">
                 {/* <div>Value:{value0}</div> */}
                 Red{" "}
                 <input

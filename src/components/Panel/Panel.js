@@ -33,7 +33,15 @@ const Panel = (value0) => {
   const [doughnut6, setDoughnut6] = useState(0);
 
   const pieHandler = () => {
-    if (datavalue0 !== 0) {
+    if (
+      datavalue0 !== 0 ||
+      datavalue1 !== 0 ||
+      datavalue2 !== 0 ||
+      datavalue3 !== 0 ||
+      datavalue4 !== 0 ||
+      datavalue5 !== 0 ||
+      datavalue6 !== 0
+    ) {
       var type = <PieBig />;
     } else {
       <PieMini />;
@@ -50,7 +58,7 @@ const Panel = (value0) => {
     const text = <button className="idBtn">ID </button>;
     const id = uuidv4();
     const updatedValue = [
-      // ...pieState,
+      ...pieState,
       {
         value0,
         value1,
@@ -88,7 +96,7 @@ const Panel = (value0) => {
     const text = <button className="idBtn">ID </button>;
     const id = uuidv4();
     const updatedValue = [
-      // ...pieState,
+      ...doughnutState,
       {
         value0,
         value1,
@@ -154,8 +162,8 @@ const Panel = (value0) => {
         setDoughnut4={setDoughnut4}
         doughnut5={doughnut5}
         setDoughnut5={setDoughnut5}
-        doughnut6={doughnut5}
-        setDoughnut6={setDoughnut5}
+        doughnut6={doughnut6}
+        setDoughnut6={setDoughnut6}
       />
       <Dashboard
         pieState={pieState}
